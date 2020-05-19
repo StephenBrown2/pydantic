@@ -107,7 +107,7 @@ clean:
 
 .PHONY: docs
 docs:
-	black -S -l 80 --target-version py38 docs/examples/
+	black -S -l 80 --target-version py38 --check --diff docs/examples/
 	flake8 --max-line-length=80 docs/examples/
 	python docs/build/main.py
 	mkdocs build
