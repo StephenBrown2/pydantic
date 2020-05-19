@@ -7,14 +7,7 @@ class Person(BaseModel):
     age: int
 
     class Config:
-        schema_extra = {
-            'examples': [
-                {
-                    'name': 'John Doe',
-                    'age': 25,
-                }
-            ]
-        }
+        schema_extra = {'examples': [{'name': 'John Doe', 'age': 25}]}
 
 
 print(Person.schema_json(indent=2))

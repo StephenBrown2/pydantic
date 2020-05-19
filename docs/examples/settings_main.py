@@ -35,12 +35,8 @@ class Settings(BaseSettings):
     class Config:
         env_prefix = 'my_prefix_'  # defaults to no prefix, i.e. ""
         fields = {
-            'auth_key': {
-                'env': 'my_auth_key',
-            },
-            'redis_dsn': {
-                'env': ['service_redis_dsn', 'redis_url']
-            }
+            'auth_key': {'env': 'my_auth_key'},
+            'redis_dsn': {'env': ['service_redis_dsn', 'redis_url']},
         }
 
 

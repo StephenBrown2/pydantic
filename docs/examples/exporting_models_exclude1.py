@@ -15,11 +15,7 @@ class Transaction(BaseModel):
 
 t = Transaction(
     id='1234567890',
-    user=User(
-        id=42,
-        username='JohnDoe',
-        password='hashedpassword'
-    ),
+    user=User(id=42, username='JohnDoe', password='hashedpassword'),
     value=9876543210,
 )
 

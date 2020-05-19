@@ -36,15 +36,10 @@ user = User(
     first_name='John',
     second_name='Doe',
     address=Address(
-        post_code=123456,
-        country=Country(
-            name='USA',
-            phone_code=1
-        )
+        post_code=123456, country=Country(name='USA', phone_code=1)
     ),
     card_details=CardDetails(
-        number=4212934504460000,
-        expires=datetime.date(2020, 5, 1)
+        number=4212934504460000, expires=datetime.date(2020, 5, 1)
     ),
     hobbies=[
         Hobby(name='Programming', info='Writing code and stuff'),

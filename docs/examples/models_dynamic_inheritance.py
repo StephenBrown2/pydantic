@@ -7,10 +7,7 @@ class FooModel(BaseModel):
 
 
 BarModel = create_model(
-    'BarModel',
-    apple='russet',
-    banana='yellow',
-    __base__=FooModel,
+    'BarModel', apple='russet', banana='yellow', __base__=FooModel,
 )
 print(BarModel)
 print(BarModel.__fields__.keys())

@@ -21,11 +21,9 @@ except ValidationError as e:
 m = User.parse_raw('{"id": 123, "name": "James"}')
 print(m)
 
-pickle_data = pickle.dumps({
-    'id': 123,
-    'name': 'James',
-    'signup_ts': datetime(2017, 7, 14)
-})
+pickle_data = pickle.dumps(
+    {'id': 123, 'name': 'James', 'signup_ts': datetime(2017, 7, 14)}
+)
 m = User.parse_raw(
     pickle_data, content_type='application/pickle', allow_pickle=True
 )

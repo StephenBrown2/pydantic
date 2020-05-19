@@ -5,6 +5,8 @@ try:
     # constraints defined in Field meaning they're ignored
     class Model(BaseModel):
         foo: PositiveInt = Field(..., lt=10)
+
+
 except ValueError as e:
     print(e)
 
